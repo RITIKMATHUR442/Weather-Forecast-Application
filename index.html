@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+
+    <div class="wrapper">          
+        <div class="input-section">
+            <button id="location-button" class="location-icon" aria-label="Use current location">
+                <img src="https://png.pngtree.com/png-vector/20230110/ourmid/pngtree-red-location-icon-clipart-png-image_6558354.png" alt="Location" />
+            </button>
+        </div>
+        <h1><div class="error-message" style="display:none; color:red;"></div></h1>
+    </div>
+    <div class="app-wrap">
+        <header>
+            <input type="text" autocomplete="off" id="search-bar" class="search-box" placeholder="Search for a city">
+            <button class="search-btn" onclick="searchCity()">
+                <i class="fa fa-search"></i>
+                <!-- <input type="text" class="search-box" placeholder="Search for a city..." /> -->
+               <!-- Add this line -->
+
+            </button>
+
+            <div class="suggestions"></div>
+        </header>
+
+        <div id="history"></div>
+
+
+        <main>
+            <section class="location">
+                <div class="city" id="city">City, Country</div>
+                <div class="date" id="date">Day, Date</div>
+            </section>
+
+            <div class="current">
+                <div class="temp" id="temp">--<span>°C</span></div>
+                <div class="weather" id="weather">--</div>
+                <div class="hi-low" id="hi-low">--°C / --°C</div>
+                <div class="humidity" id="humidity" >--%</div>
+                <div class="wind-speed" id="wind-speed">--m/s</div>
+            </div>
+
+            <section class="forecast" id="forecast">
+                <!-- Forecast cards will go here -->
+            </section>
+        </main>
+    </div>
+
+   
+    <div id="error" class="error-message" style="display: none;">
+        <p>Invalid city name</p>
+        <img src="https://cdn.dribbble.com/users/4053754/screenshots/10708408/media/be6660e424b77b2f09efd5e18465a2e7.gif" alt="Error">
+    </div>
+
+    <div id="weatherInfo"></div>
+</div>
+<div id="loading" style="display:none;">Loading...</div>
+
+
+    
+
+    
+    <footer>
+        <p>© 2024 Ritik Mathur. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/RITIKMATHUR442/callbackhell-project" target="_blank" class="social-link">
+                <img src="githubw.png" alt="GitHub" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/mr_mathur.902?igsh=MTI0OXhsYnBiNDU2eA==" target="_blank" class="social-link">
+                <img src="Instagram_icon.png" alt="Instagram" class="social-icon">
+            </a>
+            <a href="https://www.facebook.com/ritik.mathur.902/" target="_blank" class="social-link">
+                <img src="Facebook logo.svg" alt="Facebook" class="social-icon">
+            </a>
+        </div>
+    </footer>
+    
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
